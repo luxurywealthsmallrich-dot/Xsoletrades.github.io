@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>XsoleTrades – Grow With Strategy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --text: #ffffff;
+      --primary: #1e90ff;
+      --accent: #ffc107;
+      --box-bg: #111111;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      transition: 0.3s ease;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1e1e1e;
+      color: white;
+      padding: 1rem 1.5rem;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.4s ease;
+    }
+    .header-hidden {
+      transform: translateY(-100%);
+    }
+    .logo {
+      height: 40px;
+    }
+    .menu-toggle {
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .section {
+      padding: 6rem 1rem 3rem;
+      max-width: 1000px;
+      margin: auto;
+      background: var(--box-bg);
+      margin-bottom: 1rem;
+      border-radius: 10px;
+    }
+    .section h2 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .advert {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      animation: flash 2s infinite alternate;
+    }
+    @keyframes flash {
+      from { opacity: 0.7; }
+      to { opacity: 1; }
+    }
+    .testimonial, .motivation {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      animation: fadeIn 3s ease-in-out infinite alternate;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0.5; }
+      to { opacity: 1; }
+    }
+    form input, form button {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+      border: none;
+    }
+    form button {
+      background: var(--primary);
+      color: white;
+      font-weight: bold;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+    video {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      display: block;
+      margin: 1rem auto;
+    }
+    .before-after {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .before-after img {
+      max-width: 45%;
+      border-radius: 8px;
+      border: 2px solid var(--primary);
+      position: relative;
+    }
+    .before-after img::after {
+      content: "XsoleTrades";
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      font-size: 0.8rem;
+      padding: 3px 6px;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1e1e1e;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #1e1e1e;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        display: none;
+      }
+      nav.show {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header id="mainHeader">
+    <img src="file_00000000f82862468a2b69ced455f108.png" class="logo" alt="Xsole Logo" />
+    <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <nav id="mainNav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#motivation">Motivation</a>
+      <a href="#video">Video</a>
+      <a href="#form">Join Us</a>
+      <a href="#charts">Charts</a>
+    </nav>
+  </header>
+
+  <section id="about" class="section">
+    <div class="advert">📢 Unlock your trading future with XsoleTrades – where knowledge meets profitability!</div>
+    <h2>About Us</h2>
+    <p>XsoleTrades is your trusted partner for financial growth through Forex trading, education, and account management.</p>
+  </section>
+
+  <section id="services" class="section">
+    <div class="advert">🔥 Our services are designed for serious traders. Start growing today!</div>
+    <h2>Our Services</h2>
+    <ul>
+      <li>💹 Forex Account Management</li>
+      <li>📈 Signal Services</li>
+      <li>🎓 Mentorship & Training</li>
+      <li>🌍 Investment Planning</li>
+    </ul>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="advert">💬 Real stories. Real success. Be inspired by our clients!</div>
+    <h2>Client Testimonials</h2>
+    <div class="testimonial" id="testimonialBox">
+      “I started with $200 and made more than my job!” – James, UK
+    </div>
+  </section>
+
+  <section id="motivation" class="section">
+    <div class="advert">📈 Learn from the world’s top trading minds!</div>
+    <h2>Top Trader Motivation</h2>
+    <div class="motivation" id="motivationBox">
+      “The goal of a successful trader is to make the best trades. Money is secondary.” – Alexander Elder
+    </div>
+  </section>
+
+  <section id="video" class="section">
+    <div class="advert">🎥 Witness live proof of performance and trading insights!</div>
+    <h2>Recent Video Update</h2>
+    <video controls>
+      <source src="4b35cdc7e433bc5030dbdb3ed6070c53.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section id="form" class="section">
+    <div class="advert">🚀 Ready to grow your wealth? Join our investment plan now!</div>
+    <h2>Join Our Investment Plan</h2>
+    <form id="whatsappForm">
+      <input type="text" name="name" id="name" placeholder="Your Name" required>
+      <input type="email" name="email" id="email" placeholder="Your Email" required>
+      <input type="number" name="amount" id="amount" placeholder="Investment Amount ($)" required>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="charts" class="section">
+    <div class="advert">📊 Live market insights right on your screen. Stay ahead!</div>
+    <h2>Live Forex Market</h2>
+    <iframe src="https://s.tradingview.com/widgetembed/?symbol=OANDA:XAUUSD&interval=1&hidesidetoolbar=1&theme=dark&style=1&timezone=Africa%2FLagos"></iframe>
+  </section>
+
+  <section id="signals" class="section">
+    <div class="advert">📸 See the transformation! Real signals. Real results.</div>
+    <h2>Before and After Signals</h2>
+    <div class="before-after">
+      <img src="before.png" alt="Before Signal" />
+      <img src="after.png" alt="After Signal" />
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 XsoleTrades – All Rights Reserved. Follow us on
+    <a href="https://www.tiktok.com/@xsoletrades" style="color: var(--accent); text-decoration: underline;">TikTok</a>,
+    <a href="https://www.facebook.com/profile.php?id=61576614983801" style="color: var(--accent); text-decoration: underline;">Facebook</a>, and check our live results on
+    <a href="https://www.fxblue.com/users/xsoletrades" style="color: var(--accent); text-decoration: underline;">FXBlue</a>.
+  </footer>
+
+  <script>
+    const header = document.getElementById("mainHeader");
+    let lastScroll = 0;
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        header.classList.remove("header-hidden");
+        return;
+      }
+      if (currentScroll > lastScroll) {
+        header.classList.add("header-hidden");
+      } else {
+        header.classList.remove("header-hidden");
+      }
+      lastScroll = currentScroll;
+    });
+
+    document.getElementById("menuToggle").addEventListener("click", () => {
+      document.getElementById("mainNav").classList.toggle("show");
+    });
+
+    const testimonials = [
+      "“I started with $200 and made more than my job!” – James, UK",
+      "“XsoleTrades turned my account around!” – Mary, USA",
+      "“I now trade full time thanks to Xsole.” – Kofi, Ghana",
+      "“Legit, consistent and professional.” – Ahmed, UAE"
+    ];
+    let tIndex = 0;
+    setInterval(() => {
+      document.getElementById("testimonialBox").textContent = testimonials[tIndex];
+      tIndex = (tIndex + 1) % testimonials.length;
+    }, 7000);
+
+    const motivations = [
+      "“The goal of a successful trader is to make the best trades. Money is secondary.” – Alexander Elder",
+      "“Every trader will have losses, but successful traders control them.” – Jack Schwager",
+      "“Consistency and discipline make the difference.” – Richard Dennis",
+      "“Letting losses run is the most serious mistake made by most investors.” – William O’Neil"
+    ];
+    let mIndex = 0;
+    setInterval(() => {
+      document.getElementById("motivationBox").textContent = motivations[mIndex];
+      mIndex = (mIndex + 1) % motivations.length;
+    }, 8000);
+
+    // WhatsApp Form Submission
+    document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const amount = document.getElementById("amount").value.trim();
+
+      const message = `Hello, my name is ${name}. I want to invest $${amount}. My email is ${email}.`;
+      const phoneNumber = "2347015095874";
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+</body>
+</html>
